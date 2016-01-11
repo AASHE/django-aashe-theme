@@ -8,7 +8,7 @@ def read(fname):
     return open(os.path.join(os.path.dirname(__file__), fname)).read()
 
 setup(name='aashe_theme',
-      version='1.9',
+      version='1.9.1',
       description='Unify, themed for AASHE',
       author='AASHE',
       author_email='webdev@aashe.org',
