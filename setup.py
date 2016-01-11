@@ -14,11 +14,9 @@ setup(name='aashe_theme',
       author_email='webdev@aashe.org',
       url='http://pypi.aashe.org/',
       long_description=read("README.md"),
-      packages=['aashe_theme'],
+      packages=['aashe_theme', ],
       include_package_data=True,
       license="Not Licensed",
-      install_requires=[
-            "Django>=1.8",
-      ],
+      install_requires=["Django>=1.8", ],
       dependency_links=[('git+https://github.com/AASHE/')]
       )
