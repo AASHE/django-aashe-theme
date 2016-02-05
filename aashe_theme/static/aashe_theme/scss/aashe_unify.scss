@@ -1520,3 +1520,22 @@ i.icon-bg-u {
 .blog-trending h3 a:hover {
 	color: $primarycolor !important;
 }
+
+/* top-nav and aashe-tabs
+------------------------------------*/
+.aashe-tabs a {
+        color: #223c52;
+        margin-right: 10px;
+        margin-left: 10px;
+        margin-bottom: 10px;
+        font-family: 'DejaVuSans', Helvetica, Arial, 'Liberation Sans',
+                     FreeSans, sans-serif;
+        font-weight: bold;
+        font-size: 20px;
+        color: #223C52;
+}
+
+.top-nav {
+        border-bottom: 2px solid #eee;
+        margin-top: 34px;
+}
