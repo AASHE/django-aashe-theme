@@ -24,14 +24,23 @@ $extracolor: $offgreen;
 $transprimary: $transgreen;
 $transsecondary: $transyellow;
 
-.btn-success {
-    // color: #fff;
-    background-color: $lightblue;
-    border-color: $lightblue;
+@function tint($color, $percentage) {
+  @return mix(white, $color, $percentage);
 }
-.btn-success:hover {
-    background-color: $blue;
-    border-color: $lightblue;
+
+@function shade($color, $percentage) {
+  @return mix(black, $color, $percentage);
+}
+
+i.icon-bg-green { background-color: $green; }
+i.icon-bg-light-green { background-color: $lightgreen; }
+i.icon-bg-yellow { background-color: $yellow; }
+i.icon-bg-purple { background-color: $purple; }
+i.icon-bg-blue { background-color: $blue; }
+i.icon-bg-dark-blue { background-color: $darkblue; }
+
+.profile .social-contacts-v3 li i.tw {
+  background-color: $blue;
 }
 
 
@@ -482,7 +491,6 @@ a.read-more:hover {
 .btn-u:hover,
 .btn-u:focus,
 .btn-u:active,
-.btn-u.active,
 .open .dropdown-toggle.btn-u {
 	background: $supportcolor;
 	color: #fff;
@@ -492,6 +500,25 @@ a.read-more:hover {
 .btn-u-split.dropdown-toggle {
    border-left: solid 1px $supportcolor;
 }
+
+// .btn-default {}
+.btn-primary { background-color: $lightgreen; }
+.btn-primary:hover, .btn-primary:active, .btn-primary:focus  {
+  background-color: shade($lightgreen, 10%);
+}
+
+.btn-success { background-color: $green; }
+.btn-success:hover, .btn-success:active, .btn-success:focus {
+  background-color: shade($green, 10%);
+}
+
+.btn-info { background-color: $lightblue; }
+.btn-info:hover, .btn-info:active, .btn-info:focus {
+  background-color: shade($lightblue, 10%);
+}
+// .btn-warning { background-color: $green; }
+// .btn-danger { background-color: red; }
+// .btn-link { background-color: $green; }
 
 /* Bordered Buttons */
 .btn-u.btn-brd {
