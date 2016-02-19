@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{# assumes you have a 'base.html' template #}
+
+{% load static from staticfiles %}
+
+{% block title %}{% block error_title %}{% endblock %} - {{ block.super }}{% endblock %}
+
+{% block css %}
+    {{ block.super }}
+    <link rel="stylesheet" href="{% static 'aashe_theme/unify/css/pages/page_404_error.css' %}"/>
+{% endblock css %}
+
+{% block body %}
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+          
+          <div class="error-v1">
+              <span class="error-v1-title">Sorry</span>
+              <span>{% block error_h1 %}{% endblock %}</span>
+              <p>{% block error_text %}{% endblock %}</p>
+          </div>
+        </div>
+    </div><!--/row-->
+{% endblock body %}
