@@ -1,0 +1,42 @@
+{# extend this with your own "base.html" template #}
+
+{% load static from staticfiles %}
+
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
+<head>
+{% block head %}
+  <title>{% block title %}{% endblock %}</title>
+
+  <!-- Meta -->
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="{% block meta_description %}{% endblock %}" name="description"/>
+  <meta content="" name="author"/>
+
+  <link rel="shortcut icon" href="{% static 'img/favicon.ico' %}"/>
+
+  {% block css %}
+    <!-- CSS Theme -->
+    {% include 'aashe_theme/styles_compressed.html' %}
+  {% endblock css %}
+{% endblock %}
+</head>
+
+<body class="{% block body_class %}{% endblock %}">
+
+  <div class="wrapper">
+    {% block header %}{% endblock %}
+    {% block body %}{% endblock %}
+    {% block footer %}{% endblock %}
+  </div>
+
+  {% block javascript %}
+    <!-- JS Theme -->
+    {% include 'aashe_theme/javascript_compressed.html' %}
+  {% endblock %}
+</body>
+
+</html>
